@@ -219,7 +219,7 @@ contract Bank {
     }
 
     //销户
-    function DestroyingAccount(address addr) public onlyOwner {
+    function destroyingAccount(address addr) public onlyOwner {
         //退款
         //余额
         uint256 balance = dataBase[addr].balance;
