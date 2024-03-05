@@ -73,22 +73,35 @@
 						"type": "address"
 					}
 				],
-				"name": "DestroyingAccount",
+				"name": "addAdministrator",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "checkIsAdministrator",
+				"outputs": [
 					{
-						"internalType": "address",
-						"name": "addr",
-						"type": "address"
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
-				"name": "addAdministrator",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkIsGod",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -125,6 +138,26 @@
 			},
 			{
 				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "destroyingAccount",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getAdministratorList",
 				"outputs": [
 					{
@@ -144,6 +177,54 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "getUser",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "balance",
+								"type": "uint256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "timestamp",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "category",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "value",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct Bank.TransactionInfo[]",
+								"name": "transactionLog",
+								"type": "tuple[]"
+							}
+						],
+						"internalType": "struct Bank.UserInfo",
+						"name": "",
+						"type": "tuple"
 					}
 				],
 				"stateMutability": "view",
@@ -215,11 +296,11 @@
 	},
 	"sources": {
 		"contracts/contract3/bank.sol": {
-			"keccak256": "0x591c931a8f262e8eb9227bc49b28e52434aba266b1312b5ac80b37609c91afc7",
+			"keccak256": "0x51751ed489169ac96b4be026f49a35c400d7bbe43d3568c73b6b7ee6ad2caa0a",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://0b79a29b081fce841839d4678673d87e700513cbe686f291f5b9521dccea6d70",
-				"dweb:/ipfs/QmeeQYxBvWxrf86gRM7oX3WTxANG37yKPKMo7jRC15h7LR"
+				"bzz-raw://86a76a5e3433aa6f64e409d520572321145b340424acef31d9689f60edf63a93",
+				"dweb:/ipfs/QmRpGGt7hmaSkGkAp61KYQZgYFkhQUjdGzoQHSbQmc5rTo"
 			]
 		}
 	},

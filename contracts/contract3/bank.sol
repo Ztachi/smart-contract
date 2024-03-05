@@ -114,6 +114,23 @@ contract Bank {
         emit Deposit(msg.sender, msg.value);
     }
 
+    // 存钱
+    function deposit() external payable {
+        //记录用户地址
+        addUserAddress(msg.sender);
+        //存
+        dataBase[msg.sender].balance += msg.value;
+        dataBase[msg.sender].transactionLog.push(
+            TransactionInfo({
+                timestamp: block.timestamp,
+                category: "deposit",
+                value: msg.value
+            })
+        );
+
+        emit Deposit(msg.sender, msg.value);
+    }
+
     //取钱
     function withdraw(uint256 value) public payable nonReentrant {
         //余额
@@ -174,6 +191,16 @@ contract Bank {
         return allUserAddresses;
     }
 
+    //获取用户
+    function getUser(address addr)
+        public
+        view
+        AdministratorPlus
+        returns (UserInfo memory)
+    {
+        return dataBase[addr];
+    }
+
     //添加管理员
     function addAdministrator(address addr) public onlyOwner {
         //没记录过就记录地址
@@ -229,6 +256,16 @@ contract Bank {
         }
         //删除数据
         delUserAddresses(addr);
+    }
+
+    //是否是管理员
+    function checkIsAdministrator() public view returns (bool) {
+        return owner == msg.sender || administrators[msg.sender];
+    }
+
+    //是否是上帝
+    function checkIsGod() public view returns (bool) {
+        return owner == msg.sender;
     }
 
     fallback() external {
