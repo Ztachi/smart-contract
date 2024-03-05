@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "FunctionCalled",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "foo",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"tests/pay.sol": "Callee"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"tests/pay.sol": {
+			"keccak256": "0x9b1d831ac52c32965e7155b3e44fdfb1f2d332ac68f996b4224f194b06a161a1",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://d512a007e9b80253ee1c354e3a066f0a4769f90b442eeb5cc8254c7b8163587d",
+				"dweb:/ipfs/QmZwFM5BaghRwaevPCDjtsM6UDebjxbcwQ6scvpiqwj5hg"
+			]
+		}
+	},
+	"version": 1
+}
