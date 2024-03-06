@@ -153,7 +153,7 @@
 				],
 				"name": "destroyingAccount",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -296,11 +296,11 @@
 	},
 	"sources": {
 		"contracts/contract3/bank.sol": {
-			"keccak256": "0x51751ed489169ac96b4be026f49a35c400d7bbe43d3568c73b6b7ee6ad2caa0a",
+			"keccak256": "0xc8dc057b73b4af13e870ee65b1932efecd9010b4011d46e8332171be5123d8ad",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://86a76a5e3433aa6f64e409d520572321145b340424acef31d9689f60edf63a93",
-				"dweb:/ipfs/QmRpGGt7hmaSkGkAp61KYQZgYFkhQUjdGzoQHSbQmc5rTo"
+				"bzz-raw://48e526a394ece3f4325a37b121e46b789b6add4d24c30850d3075c9016cdb5a0",
+				"dweb:/ipfs/QmZuHGvcAAqE8MacrXKmygi86ZkbXyPSBXGKJJnguHAKaq"
 			]
 		}
 	},

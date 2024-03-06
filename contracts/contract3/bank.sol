@@ -176,6 +176,11 @@ contract Bank {
         emit Withdraw(msg.sender, balance);
     }
 
+    //获取用户
+    function getUser(address addr) public view returns (UserInfo memory) {
+        return dataBase[addr];
+    }
+
     //查看总存款额度
     function getBalance() public view returns (uint256) {
         return address(this).balance;
@@ -189,16 +194,6 @@ contract Bank {
         returns (address[] memory)
     {
         return allUserAddresses;
-    }
-
-    //获取用户
-    function getUser(address addr)
-        public
-        view
-        AdministratorPlus
-        returns (UserInfo memory)
-    {
-        return dataBase[addr];
     }
 
     //添加管理员
@@ -246,7 +241,7 @@ contract Bank {
     }
 
     //销户
-    function destroyingAccount(address addr) public onlyOwner {
+    function destroyingAccount(address addr) public payable onlyOwner {
         //退款
         //余额
         uint256 balance = dataBase[addr].balance;
